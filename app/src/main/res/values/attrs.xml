@@ -3,4 +3,8 @@
     <declare-styleable name="EditTextWithClear">
         <attr name="clearIcon" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="CustomDrawView">
+        <attr name="colorDraw" format="color"/>
+    </declare-styleable>
 </resources>
