@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/customEditTextFragment"
+        android:icon="@drawable/ic_icon_one"
+        android:title="CustomEditText" />
+    <item
+        android:id="@+id/customDrawFragment"
+        android:icon="@drawable/ic_icon_two"
+        android:title="CustomDraw" />
+    <item
+        android:id="@+id/clipPathFragment"
+        android:icon="@drawable/ic_icon_three"
+        android:title="CipPath" />
+    <item
+        android:id="@+id/surfaceViewFragment"
+        android:icon="@drawable/ic_icon_four"
+        android:title="SurfaceView" />
+</menu>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/customEditTextFragment">
+
+    <fragment
+        android:id="@+id/customEditTextFragment"
+        android:name="com.example.customviews.fragments.CustomEditViewFragment"
+        android:label="CustomEditText"
+        tools:layout="@layout/fragment_custom_edit_view" />
+    <fragment
+        android:id="@+id/customDrawFragment"
+        android:name="com.example.customviews.fragments.CustomDrawFragment"
+        android:label="CustomDraw"
+        tools:layout="@layout/fragment_custom_draw" />
+    <fragment
+        android:id="@+id/clipPathFragment"
+        android:name="com.example.customviews.fragments.ClipPathFragment"
+        android:label="ClipPath"
+        tools:layout="@layout/fragment_clip_path" />
+    <fragment
+        android:id="@+id/surfaceViewFragment"
+        android:name="com.example.customviews.fragments.SurfaceViewFragment"
+        android:label="SurfaceView"
+        tools:layout="@layout/fragment_surface_view" />
+</navigation>
