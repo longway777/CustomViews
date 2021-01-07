@@ -5,10 +5,15 @@
     android:layout_height="match_parent"
     tools:context=".fragments.SurfaceViewFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.example.customviews.BubbleSurfaceView
+        android:id="@+id/bubbleSurfaceView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="surface view" />
+        android:layout_height="match_parent" />
 
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="20dp" />
 </FrameLayout>

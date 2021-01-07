@@ -15,6 +15,7 @@ import kotlin.random.Random
 class ClipPathView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
+    private var isPlaying = false
     private val faceBitmap =
         ContextCompat.getDrawable(context, R.drawable.ic_baseline_face_24)?.toBitmap(300, 300)
     private var faceX = 0f
@@ -29,6 +30,7 @@ class ClipPathView @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
         canvas?.apply {
+            if (isPlaying) drawColor(ContextCompat.getColor(context,R.color.light_white))
             faceBitmap?.let { drawBitmap(it, faceX, faceY, null) }
             drawPath(path, paint)
         }
@@ -40,6 +42,7 @@ class ClipPathView @JvmOverloads constructor(
                 MotionEvent.ACTION_DOWN -> {
                     randomPosition()
                     path.reset()
+                    isPlaying =  true
                     path.addRect(0f, 0f, width.toFloat(), height.toFloat(), Path.Direction.CW)
                     path.addCircle(x, y, 300f, Path.Direction.CCW)
                 }
@@ -49,6 +52,7 @@ class ClipPathView @JvmOverloads constructor(
                     path.addCircle(x, y, 300f, Path.Direction.CCW)
                 }
                 MotionEvent.ACTION_UP -> {
+                    isPlaying = false
                     path.reset()
                 }
             }
